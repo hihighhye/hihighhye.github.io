@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum - Clone</title>
+</head>
+<body>
+    <div class="grid-frame">
+        <div class="top-left">
+            <form class="hidden" id="timer-form" autocomplete="off">
+                <div id="timer-container">
+                    <div id="t-mode-section">
+                        <div class="tmode" id="focus">FOCUS</div>
+                        <div class="tmode" id="break">BREAK</div>
+                    </div>
+                    <div id="t-input-section">
+                        <input type="number" class="timer-input" id="min-input" name="min" min="10" step="5" max="60" />
+                        <span>:</span>
+                        <input type="number" class="timer-input" id="sec-input" name="sec" min="00" step="30" max="59" />
+                    </div>
+                    <div class="hidden" id="t-text-section">
+                        <div class="timer-text" id="min-text"></div>
+                        <div id="mid-text">:</div>
+                        <div class="timer-text" id="sec-text"></div>
+                    </div>
+                    <div id="t-btn-section">
+                        <button class="btn t-btn" id="t-start-button"><img class="btnIcon t-btnIcon" src="images/play-keep-3.png" alt="start" /></button>
+                        <button class="btn t-btn" id="t-pause-button"><img class="btnIcon t-btnIcon" src="images/pause-keep-3.png" alt="pause" /></button>
+                        <button class="btn t-btn" id="t-stop-button"><img class="btnIcon t-btnIcon" src="images/stop-keep-3.png" alt="stop" /></button>                       
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="top-mid" id="date-container">
+            <span></span>
+        </div>
+        <div class="top-right">
+            <div id="weather-container">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="focused-container">
+                <span>0m</span>
+                <span>Focused Today</span>
+            </div>
+        </div>
+        <div class="left-side">
+            <div class="hidden" id="l-side-menu-bar">
+                <div class="side-menu-container" id="pomodoro">
+                    <button class="sideBtn" id="pmdr-button"><img class="sideIcon" src="images/timer-keep.png" alt="pomodoro" /></button>
+                    <span>pomodoro</span>
+                </div>
+                <div class="side-menu-container" id="music">
+                    <button class="sideBtn" id="music-button"><img class="sideIcon" src="images/vinyl.png" alt="music" /></button>
+                    <span>music</span>
+                </div>
+                <div class="side-menu-container" id="helper">
+                    <button class="sideBtn" id="helper-button"><img class="sideIcon" src="images/saturn.png" alt="helper" /></button>
+                    <span>helper</span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <h1 id="clock">00:00</h1>
+            <form class="hidden" id="login-form" autocomplete="off">
+                <h1 id="login-text-1">Hello, What's your name?</h1>
+                <input type="text" class="blank" id="name-field" required maxlength="15" />
+                <h4 id="login-text-2">Please let us know how to address you.</h4>
+                <input id="continueBtn" type="submit" value="Continue >" />
+            </form>
+            <div class="hidden" id="greeting"></div>
+            <form class="hidden" id="goal-form" autocomplete="off">
+                <h2 id="main-goal-text">What is your main goal for today?</h2>
+                <input class="blank" id="main-goal" type="text" required maxlength="50" />
+            </form>
+            <div class="hidden" id="users-goal-container">
+                <span id="users-goal-text">TODAY</span>
+                <div id="todays-goal">
+                    <span id="users-goal"></span>
+                    <button class="btn" id="delete-button"><img class="btnIcon" id="delBtn-icon" src="images/cancel-button.png" alt="delete-button" /></button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom" id="quote-container">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="right-side hidden">
+            <div id="r-side-container">
+                <div id="todo-title">Today</div>
+                <div id="todo-body">
+                    <fieldset id="todo-fieldset"></fieldset>
+                    <form id="todo-form" autocomplete="off">
+                        <input type="text" class="blank-2" id="todo-input" placeholder="New Task" required />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="hidden" id="foot-menu">
+                <div id="foot-menu-container">
+                    <button class="btn" id="tasks-button"><img class="btnIcon" id="tasksBtn-icon" src=images/check-button.png alt="tasks-button" /></button>
+                    <span>Tasks</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
